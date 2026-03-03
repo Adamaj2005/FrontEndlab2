@@ -1,0 +1,20 @@
+<!-- Student section -->
+<h1>Students</h1>
+
+<!-- Loop through each student and display their details -->
+@for(student of students; track student.id) {
+  <li>{{ student.id }}, {{ student.name }}, {{ student.address }}</li>
+}
+
+<hr>
+
+<!-- Weather section -->
+<h1>Weather in Galway</h1>
+
+<!-- Only display weather data once it has loaded -->
+@if(weatherData) {
+  <p>Temperature: {{ weatherData.main.temp }}</p>
+  <p>Weather: {{ weatherData.weather[0].description }}</p>
+  <p>Humidity: {{ weatherData.main.humidity }}</p>
+  <p>Wind Speed: {{ weatherData.wind.speed }}</p>
+}

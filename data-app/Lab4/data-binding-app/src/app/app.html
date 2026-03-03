@@ -1,0 +1,14 @@
+<!-- The 'dblclick' event is bound to call the 'onDbClick' function when the image is double-clicked -->
+<img (dblclick)="onDblClick()" src="https://upload.wikimedia.org/wikipedia/commons/3/34/Red_button.jpg" height="42" width="42">
+
+<!-- The '[hidden]' directive is used to conditionally hide the element -->
+<h2 [hidden]="hide">Look at the star.</h2>
+
+<!-- The '(click)' event is bound to call the 'addToAmt()' function when the button is clicked -->
+<button (click)="addToAmt()">Press Me</button>
+
+<!-- Display the number of times the button has been pressed using data binding -->
+<h1>The number of times the button has been pressed is {{pressed}}</h1>
+
+<!-- 'var' syntax is used for data binding between the HTML and TypeScript components -->
+<app-listcomponent></app-listcomponent>
